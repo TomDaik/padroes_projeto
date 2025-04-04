@@ -31,7 +31,7 @@ public class Piloto {
     }
 
     public Piloto(String str) {
-        String[] vetor = str.split(";");
+        String[] vetor = str.split(",");
         this.codigo = vetor[0];
         this.nome = vetor[1];
         this.pais = vetor[2];

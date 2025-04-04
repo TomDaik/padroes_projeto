@@ -6,7 +6,7 @@
 package iterator.persistencia;
 
 import iterator.classededados.Piloto;
-import iterator.classededados.ColecaoDeObjetos;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.*;
@@ -16,27 +16,11 @@ import java.util.*;
  */
 public class PilotoPersistencia {
     //Atributos
-    private String nomeDoArquivo;
+    private final String nomeDoArquivo;
 
     //Metodos
     public PilotoPersistencia(String nome) {
         nomeDoArquivo = nome;
-    }
-
-    private int quantidadeDeAlunosNoArquivo() throws Exception {
-        try {
-            int quantidade = 0;
-            FileReader fr = new FileReader(nomeDoArquivo);
-            BufferedReader br = new BufferedReader(fr);
-            String linha = "";
-            while ((linha = br.readLine()) != null) {
-                quantidade++;
-            }
-            br.close();
-            return quantidade;
-        } catch (Exception erro) {
-            throw erro;
-        }
     }
 
     public Iterator listagemDePilotosLinkedList() throws Exception {

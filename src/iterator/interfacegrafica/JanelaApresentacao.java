@@ -3,15 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package iterator.interfacegrafica;
+
 import iterator.classededados.Piloto;
 import iterator.persistencia.PilotoPersistencia;
 
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import java.util.Iterator;
-
 
 /**
  *
@@ -35,38 +34,41 @@ public class JanelaApresentacao extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButtonListarOsAlunos = new javax.swing.JButton();
+        jButtonListarOsPilotosLinkedList = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableDados = new javax.swing.JTable();
-        jButtonListarOsAlunosArrayList = new javax.swing.JButton();
+        jButtonListarOsPilotosTreeSet = new javax.swing.JButton();
         jButtonLimpar = new javax.swing.JButton();
+        jButtonListarOsPilotosHashSet = new javax.swing.JButton();
+        jButtonListarOsPilotosPriorityQueue = new javax.swing.JButton();
+        jButtonListarOsPilotosQueue = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButtonListarOsAlunos.setText("Listar os Alunos - vetor");
-        jButtonListarOsAlunos.addActionListener(new java.awt.event.ActionListener() {
+        jButtonListarOsPilotosLinkedList.setText("Listar os Pilotos - LinkedList");
+        jButtonListarOsPilotosLinkedList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonListarOsAlunosActionPerformed(evt);
+                jButtonListarOsPilotosLinkedListActionPerformed(evt);
             }
         });
 
-        jTableDados.setModel(new DefaultTableModel(
+        jTableDados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Matricula", "Nome"
+                "Código", "Nome", "País", "Idade", "Equipe", "Fabricante", "Pontos"
             }
         ));
         jScrollPane1.setViewportView(jTableDados);
 
-        jButtonListarOsAlunosArrayList.setText("Listar os Alunos - ArrayList");
-        jButtonListarOsAlunosArrayList.addActionListener(new java.awt.event.ActionListener() {
+        jButtonListarOsPilotosTreeSet.setText("Listar os Pilotos - TreeSet");
+        jButtonListarOsPilotosTreeSet.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonListarOsAlunosArrayListActionPerformed(evt);
+                jButtonListarOsPilotosTreeSetActionPerformed(evt);
             }
         });
 
@@ -77,30 +79,61 @@ public class JanelaApresentacao extends javax.swing.JFrame {
             }
         });
 
+        jButtonListarOsPilotosHashSet.setText("Listar os Pilotos - HashSet");
+        jButtonListarOsPilotosHashSet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonListarOsPilotosHashSetActionPerformed(evt);
+            }
+        });
+
+        jButtonListarOsPilotosPriorityQueue.setText("Listar os Pilotos - PriorityQueue");
+        jButtonListarOsPilotosPriorityQueue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonListarOsPilotosPriorityQueueActionPerformed(evt);
+            }
+        });
+
+        jButtonListarOsPilotosQueue.setText("Listar os Pilotos - Queue");
+        jButtonListarOsPilotosQueue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonListarOsPilotosQueueActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(jButtonListarOsPilotosLinkedList)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonListarOsPilotosTreeSet)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonListarOsPilotosHashSet)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonListarOsPilotosPriorityQueue)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonListarOsPilotosQueue)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonLimpar)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addComponent(jButtonListarOsAlunos)
-                .addGap(91, 91, 91)
-                .addComponent(jButtonLimpar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
-                .addComponent(jButtonListarOsAlunosArrayList)
-                .addGap(71, 71, 71))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonListarOsAlunos)
-                    .addComponent(jButtonListarOsAlunosArrayList)
-                    .addComponent(jButtonLimpar))
+                    .addComponent(jButtonListarOsPilotosLinkedList)
+                    .addComponent(jButtonListarOsPilotosTreeSet)
+                    .addComponent(jButtonLimpar)
+                    .addComponent(jButtonListarOsPilotosHashSet)
+                    .addComponent(jButtonListarOsPilotosPriorityQueue)
+                    .addComponent(jButtonListarOsPilotosQueue))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 368, Short.MAX_VALUE)
                 .addContainerGap())
@@ -109,52 +142,73 @@ public class JanelaApresentacao extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void imprimirDadosNaGrid(Iterator conjunto){
-        DefaultTableModel model =  (DefaultTableModel) jTableDados.getModel();
+    private void imprimirDadosNaGrid(Iterator conjunto) {
+        DefaultTableModel model = (DefaultTableModel) jTableDados.getModel();
         model.setNumRows(0);
-        while(conjunto.hasNext()){
-                String[] linha = new String[7];
-                Piloto objetoPiloto = (Piloto)conjunto.next();
-                linha[0]= objetoPiloto.getCodigo();
-                linha[1]= objetoPiloto.getNome();
-                linha[2]= objetoPiloto.getPais();
-                linha[3]= objetoPiloto.getNome();
-                linha[4]= objetoPiloto.getIdade();
-                linha[5]= objetoPiloto.getEquipe();
-                linha[6]= objetoPiloto.getFabricanteMotor();
-                linha[7]= objetoPiloto.getPontos();
-                model.addRow(linha);
-            }
+        while (conjunto.hasNext()) {
+            String[] linha = new String[7];
+            Piloto objetoPiloto = (Piloto) conjunto.next();
+            linha[0] = objetoPiloto.getCodigo();
+            linha[1] = objetoPiloto.getNome();
+            linha[2] = objetoPiloto.getPais();
+            linha[3] = objetoPiloto.getIdade();
+            linha[4] = objetoPiloto.getEquipe();
+            linha[5] = objetoPiloto.getFabricanteMotor();
+            linha[6] = objetoPiloto.getPontos();
+            model.addRow(linha);
+        }
     }
-    
-    private void jButtonListarOsAlunosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonListarOsAlunosActionPerformed
-        // TODO add your handling code here:
-        try{
-            //
-            PilotoPersistencia dados = new PilotoPersistencia("./src/dados/DadosDosPilotosF1 2.csv");
-//            }
+
+    private void jButtonListarOsPilotosLinkedListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonListarOsPilotosLinkedListActionPerformed
+        try {
+            PilotoPersistencia dados = new PilotoPersistencia("/home/pedro/IdeaProjects/padroes/src/iterator/dados/DadosDosPilotosF1 2.csv");
             imprimirDadosNaGrid(dados.listagemDePilotosLinkedList());
-        }catch(Exception erro){
+        } catch (Exception erro) {
             JOptionPane.showMessageDialog(rootPane, erro);
         }
-    }//GEN-LAST:event_jButtonListarOsAlunosActionPerformed
+    }//GEN-LAST:event_jButtonListarOsPilotosLinkedListActionPerformed
 
-    private void jButtonListarOsAlunosArrayListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonListarOsAlunosArrayListActionPerformed
-        // TODO add your handling code here:
-        try{
-            PilotoPersistencia dados = new PilotoPersistencia("./src/dados/ADadosDosPilotosF1 2.csv");
+    private void jButtonListarOsPilotosTreeSetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonListarOsPilotosTreeSetActionPerformed
+        try {
+            PilotoPersistencia dados = new PilotoPersistencia("/home/pedro/IdeaProjects/padroes/src/iterator/dados/DadosDosPilotosF1 2.csv");
             imprimirDadosNaGrid(dados.listagemDePilotosTreeSet());
-        }catch(Exception erro){
+        } catch (Exception erro) {
             JOptionPane.showMessageDialog(rootPane, erro);
         }
-
-    }//GEN-LAST:event_jButtonListarOsAlunosArrayListActionPerformed
+    }//GEN-LAST:event_jButtonListarOsPilotosTreeSetActionPerformed
 
     private void jButtonLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLimparActionPerformed
         // TODO add your handling code here:
-        DefaultTableModel model =  (DefaultTableModel) jTableDados.getModel();
+        DefaultTableModel model = (DefaultTableModel) jTableDados.getModel();
         model.setNumRows(0);
     }//GEN-LAST:event_jButtonLimparActionPerformed
+
+    private void jButtonListarOsPilotosHashSetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonListarOsPilotosHashSetActionPerformed
+        try {
+            PilotoPersistencia dados = new PilotoPersistencia("/home/pedro/IdeaProjects/padroes/src/iterator/dados/DadosDosPilotosF1 2.csv");
+            imprimirDadosNaGrid(dados.listagemDePilotosHashSet());
+        } catch (Exception erro) {
+            JOptionPane.showMessageDialog(rootPane, erro);
+        }
+    }//GEN-LAST:event_jButtonListarOsPilotosHashSetActionPerformed
+
+    private void jButtonListarOsPilotosPriorityQueueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonListarOsPilotosPriorityQueueActionPerformed
+        try {
+            PilotoPersistencia dados = new PilotoPersistencia("/home/pedro/IdeaProjects/padroes/src/iterator/dados/DadosDosPilotosF1 2.csv");
+            imprimirDadosNaGrid(dados.listagemDePilotosPriorityQueue());
+        } catch (Exception erro) {
+            JOptionPane.showMessageDialog(rootPane, erro);
+        }
+    }//GEN-LAST:event_jButtonListarOsPilotosPriorityQueueActionPerformed
+
+    private void jButtonListarOsPilotosQueueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonListarOsPilotosQueueActionPerformed
+        try {
+            PilotoPersistencia dados = new PilotoPersistencia("/home/pedro/IdeaProjects/padroes/src/iterator/dados/DadosDosPilotosF1 2.csv");
+            imprimirDadosNaGrid(dados.listagemDePilotosQueue());
+        } catch (Exception erro) {
+            JOptionPane.showMessageDialog(rootPane, erro);
+        }
+    }//GEN-LAST:event_jButtonListarOsPilotosQueueActionPerformed
 
     /**
      * @param args the command line arguments
@@ -193,8 +247,11 @@ public class JanelaApresentacao extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonLimpar;
-    private javax.swing.JButton jButtonListarOsAlunos;
-    private javax.swing.JButton jButtonListarOsAlunosArrayList;
+    private javax.swing.JButton jButtonListarOsPilotosHashSet;
+    private javax.swing.JButton jButtonListarOsPilotosLinkedList;
+    private javax.swing.JButton jButtonListarOsPilotosPriorityQueue;
+    private javax.swing.JButton jButtonListarOsPilotosQueue;
+    private javax.swing.JButton jButtonListarOsPilotosTreeSet;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTableDados;
     // End of variables declaration//GEN-END:variables
